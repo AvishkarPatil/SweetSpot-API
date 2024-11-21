@@ -1,7 +1,11 @@
-<h1 align="center">SweetSpot API</h1>
+<h2 align="center">SweetSpot API</h2>
 
 <h3 align="center">Django REST API for SweetSpot - Delivering Delight to Your Doorstep</h3>
-<br>
+
+<div align="center">
+<img src="static/screenshots/square_logo_dark.png" width="150">
+</div>
+
 <p align="center">SweetSpot is a Python-based e-commerce platform for ordering and delivering customized cakes. It offers features such as online ordering, real-time delivery tracking, and store management. The platform aims to enhance customer satisfaction and streamline operations with a seamless user experience.</p>
 
 ### Table of Contents
