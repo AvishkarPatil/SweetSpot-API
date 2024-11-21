@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fafafa;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 650px;
+            margin: 40px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+            font-size: 16px;
+        }
+        .email-header {
+            background-color: #ff6f61;
+            color: #ffffff;
+            padding: 30px;
+            text-align: center;
+            font-size: 28px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .email-body {
+            padding: 30px;
+            color: #333333;
+            line-height: 1.7;
+        }
+        .email-body h3 {
+            font-size: 24px;
+            color: #333333;
+        }
+        .order-details {
+            background-color: #f9f9f9;
+            padding: 20px;
+            margin-top: 20px;
+            border-radius: 8px;
+            border-left: 5px solid #ff6f61;
+        }
+        .order-details .detail-item {
+            margin-bottom: 12px;
+            font-size: 16px;
+            font-weight: 500;
+        }
+        .highlight {
+            color: #ff6f61;
+            font-weight: 600;
+        }
+        .cake-list {
+            margin-top: 12px;
+            font-size: 16px;
+            color: #555555;
+            margin-left: 20px;
+        }
+        .cake-list li {
+            margin-bottom: 6px;
+        }
+        .email-footer {
+            background-color: #f4f4f4;
+            text-align: center;
+            padding: 20px;
+            color: #777777;
+            font-size: 14px;
+        }
+        .email-footer a {
+            color: #ff6f61;
+            text-decoration: none;
+            font-weight: 600;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            SweetSpot - Order Placed
+        </div>
+
+        <div class="email-body">
+            <h3>Thank You for Your Order!</h3>
+            <p>We are excited to confirm that your order has been successfully placed. Below are the details:</p>
+
+            <div class="order-details">
+                <div class="detail-item">Order ID: <span class="highlight">{{ order_id }}</span></div>
+                <div class="detail-item">Customer Name: <span class="highlight">{{ customer_name }}</span></div>
+                <div class="detail-item">Cakes Ordered:</div>
+                <ul class="cake-list">
+                    {% for cake_name in cake_names %}
+                        <li>{{ cake_name }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+
+        </div>
+
+
+        <div class="email-footer">
+            <p>If you have any questions, please <a href="mailto:contact@sweetspot.com">contact us</a>.</p>
+            <p>© 2024 SweetSpot. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>

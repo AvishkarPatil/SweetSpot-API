@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Order Confirmation</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f1f3f6;
+            margin: 0;
+            padding: 0;
+        }
+        .email-container {
+            max-width: 650px;
+            margin: 30px auto;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            overflow: hidden;
+        }
+        .email-header {
+            background-color: #4caf50;
+            color: #ffffff;
+            text-align: center;
+            padding: 10px;
+            font-size: 20px;
+            font-weight: bold;
+            letter-spacing: 1px;
+        }
+        .email-body {
+            padding: 30px;
+            color: #333333;
+            line-height: 1.6;
+        }
+        .email-body p {
+            font-size: 16px;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #4caf50;
+        }
+        .email-footer {
+            background-color: #f9f9f9;
+            text-align: center;
+            padding: 20px;
+            font-size: 14px;
+            color: #777777;
+        }
+        .email-footer a {
+            color: #4caf50;
+            text-decoration: none;
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="email-container">
+        <div class="email-header">
+            <h2>Order Confirmation</h2>
+        </div>
+
+        <div class="email-body">
+            <p>Dear {{ customer_first_name }},</p>
+            <p>We are delighted to inform you that your order <span class="highlight">ID: #{{ order_id }}</span> has been confirmed. Your delicious cakes will be delivered to the following address:</p>
+            <p><strong>{{ delivery_address }}</strong></p>
+            <p>Estimated delivery time: <em>{{ duration }}</em></p>
+            <p>Thank you for choosing SweetSpot! We hope you enjoy your order and look forward to serving you again.</p>
+            <p>Best regards,<br><strong>SweetSpot Team</strong></p>
+        </div>
+
+        <div class="email-footer">
+            <p>If you have any questions, feel free to <a href="mailto:contact@sweetspot.com">contact us</a>.</p>
+            <p>© 2024 SweetSpot. All rights reserved.</p>
+        </div>
+    </div>
+</body>
+</html>
