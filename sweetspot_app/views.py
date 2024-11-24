@@ -398,9 +398,7 @@ class OrderViewSet(viewsets.ModelViewSet):
             return Response({"message": "Order not found"}, status=status.HTTP_404_NOT_FOUND)
 
         try:
-            gmaps = googlemaps.Client(key="AIzaSyAhagodsFfVLkHh952Qc31OyC7wO0DXf7c")
-
-            # sweetspot_location = "CakeVilla, Kolhapur, Maharashtra, India"
+            gmaps = googlemaps.Client(key="XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX")
 
             store = order.store
             if not store:
